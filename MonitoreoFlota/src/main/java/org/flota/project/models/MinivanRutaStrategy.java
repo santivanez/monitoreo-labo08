@@ -21,6 +21,7 @@ public class MinivanRutaStrategy extends Minivan implements RutaStrategy {
         ruta.addPunto(new Despacho(-77.085750, -12.057957, "Los Suaces", "Urgente", "3324321", 2.0));
         ruta.addPunto(new Despacho(-77.084760, -12.058826, "Av. Sol 434", "Normal", "7879876", 2.0));
         ruta.addPunto(new Recojo(-77.086194, -12.061448, "Calle 22", "Urgente", 234234.0));
+        ruta.addPunto(new FueraDeLinea(-77.084516, -12.078045, "Almuerzo"));
         this.puntosActuales = ruta.getPoints().size();
         getPesoActual(ruta);
         return ruta;

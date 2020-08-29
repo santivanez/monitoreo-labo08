@@ -9,9 +9,9 @@ public abstract class Punto {
     private double latitud;
     private double longitud;
     private Point point;
-    private Double peso;
+    private double peso;
 
-    public Punto(double lon, double lat, Double pes){
+    public Punto(double lon, double lat, double pes){
         latitud = lat;
         longitud = lon;
         peso = pes;

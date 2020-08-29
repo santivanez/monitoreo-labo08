@@ -37,8 +37,8 @@ public class XMLExportVisitor implements XMLVisitor {
 
     @Override
     public String visitFueraDeLinea(FueraDeLinea fueraDeLinea) {
-        String xmlStr = "<root><fueralinea><comentarios>"+ fueraDeLinea.getEvento() +
-                        "</comentarios></fueralinea></root>";
+        String xmlStr = "<root><fueralinea><evento>"+ fueraDeLinea.getEvento() +
+                        "</evento></fueralinea></root>";
         System.out.println(format(xmlStr));
         return format(xmlStr);
     }
