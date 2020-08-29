@@ -18,7 +18,8 @@ public class XMLExportVisitor implements XMLVisitor {
     public String visitRecojo(Recojo recojo) {
         String xmlStr = "<root><recojo><comentarios>" + recojo.getComentarios()+
                         "</comentarios><direccion>"+ recojo.getDireccion()+
-                        "</direccion></recojo></root>";
+                        "</direccion><peso-paquete>" + recojo.getPeso() +
+                        "</peso-paquete></recojo></root>";
         System.out.println(format(xmlStr));
         return format(xmlStr);
     }
@@ -28,7 +29,8 @@ public class XMLExportVisitor implements XMLVisitor {
         String xmlStr = "<root><despacho><comentarios>"+ despacho.getComentarios()+
                         "</comentarios><direccion>"+ despacho.getDireccion()+
                         "</direccion><documento>"+ despacho.getDireccion()+
-                        "</documento></despacho></root>";
+                        "</documento><peso-paquete>" + despacho.getPeso() +
+                        "</peso-paquete></despacho></root>";
         System.out.println(format(xmlStr));
         return format(xmlStr);
     }
