@@ -4,17 +4,16 @@ public abstract class Vehiculo {
 
     private String id; // uuid
     private String estado; // ocupado/libre
-    private Double capacidadPeso;
     private Double capacidadAncho;
     private Double capacidadLargo;
 
     private int maxPuntos;
-    private Double maxCapacidad;
+    private double maxCapacidad;
 
     public Vehiculo() {
     }
 
-    public Vehiculo(int maxPuntos, Double maxCapacidad) {
+    public Vehiculo(int maxPuntos, double maxCapacidad) {
         this.maxPuntos = maxPuntos;
         this.maxCapacidad = maxCapacidad;
     }
@@ -48,7 +47,6 @@ public abstract class Vehiculo {
         return "Vehiculo{" +
                 "id='" + id + '\'' +
                 ", estado='" + estado + '\'' +
-                ", capacidadPeso=" + capacidadPeso +
                 ", capacidadAncho=" + capacidadAncho +
                 ", capacidadLargo=" + capacidadLargo +
                 ", maxPuntos=" + maxPuntos +

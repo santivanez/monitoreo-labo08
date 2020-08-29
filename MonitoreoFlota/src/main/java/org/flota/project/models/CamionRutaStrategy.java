@@ -4,10 +4,14 @@ import org.flota.project.patterns.RutaStrategy;
 
 import java.util.ArrayList;
 
-public class CamionRutaStrategy implements RutaStrategy {
+public class CamionRutaStrategy extends Camion implements RutaStrategy {
 
     private int puntosActuales = 0;
     private Double pesoActual = 0.0;
+
+    public CamionRutaStrategy() {
+        super();
+    }
 
     @Override
     public Ruta crearRuta() {
@@ -24,11 +28,19 @@ public class CamionRutaStrategy implements RutaStrategy {
 
     @Override
     public boolean validarPuntos() {
-        return false;
+        return puntosActuales <= this.getMaxPuntos();
     }
 
     @Override
     public boolean validarPeso() {
-        return false;
+        return pesoActual <= this.getMaxCapacidad();
     }
+
+    private void getPesoActual(Ruta ruta) {
+        ArrayList<Punto> puntosEnRuta = ruta.getPuntos();
+        for (Punto punto : puntosEnRuta) {
+            this.pesoActual = this.pesoActual + punto.getPeso();
+        }
+    }
+
 }
